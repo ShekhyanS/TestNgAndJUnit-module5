@@ -1,0 +1,46 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite1" verbose="1"  parallel="methods" thread-count="4">
+    <parameter name="subtractionValue" value="2"/>
+    <test name="Arithmetic Operations">
+
+        <classes>
+            <class name="unitTests.SumMethodForLongValuesTest"/>
+            <class name="unitTests.SumMethodForDoubleValuesTest"/>
+            <class name="unitTests.SubMetodForLongValuesTest"/>
+            <class name="unitTests.SubMetodForDoubleValuesTest"/>
+            <class name="unitTests.DivMethodForLongValuesTest"/>
+            <class name="unitTests.DivMethodForDoubleValuesTest"/>
+            <class name="unitTests.MultMethodForLongTest"/>
+            <class name="unitTests.MultMethodForDoubleTest"/>
+        </classes>
+    </test>
+    <test name="Trigonometric functions">
+        <classes>
+            <class name="unitTests.CosMethodTest"/>
+            <class name="unitTests.SinMethodTest"/>
+            <class name="unitTests.CtgMethodTest"/>
+            <class name="unitTests.TgMeghodClass"/>
+        </classes>
+    </test>
+    <test name="Algebraic functions">
+        <classes>
+            <class name="unitTests.PowMethodTest"/>
+            <class name="unitTests.SqrtMethodTest"/>
+        </classes>
+    </test>
+    <test name="Boolean Result Functions">
+        <groups>
+            <run>
+                <include name="Regression"/>
+                <exclude name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="unitTests.IsPositiveMethodTest"/>
+            <class name="unitTests.IsNegativeMethodTest"/>
+        </classes>
+    </test>
+
+</suite>
+
